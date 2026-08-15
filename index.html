@@ -1,243 +1,205 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8" />
+<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The Ballas Gang — Bewerbung & Fraktion</title>
-<meta name="description" content="Die Ballas Gang rund um Jan Contino: Rangsystem, Beitritt, Auszahlungen und Ziele." />
+<title>Bewerbung Leader Nationalgarde – Jan Contino</title>
+<meta name="description" content="Bewerbung von Jan Contino als Leader der Nationalgarde: Erfahrung, Konzept der Organisation, Verbesserungsvorschläge und Rangkonzept." />
+<meta property="og:title" content="Bewerbung Leader Nationalgarde – Jan Contino" />
+<meta property="og:description" content="Erfahrung, Orga-Konzept, Spezialeinheiten und vollständiges Rangkonzept der Nationalgarde." />
+<meta property="og:type" content="profile" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow:wght@400;500;600&display=swap" />
 <style>
-  :root{
-    --bg:#1c1226;--fg:#f2eef6;--card:#2a1c38;--muted:#a98fb8;
-    --primary:#a855f7;--accent:#4ade80;--border:#3d2b50;--sec:#352446;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;border-color:var(--border);}
-  html{scroll-behavior:smooth;}
-  body{background:var(--bg);color:var(--fg);font-family:"Inter",sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5;}
-  h1,h2,h3{font-family:"Bebas Neue",sans-serif;letter-spacing:.02em;font-weight:400;}
-  a{text-decoration:none;color:inherit;}
-  .wrap{max-width:1100px;margin:0 auto;padding:0 20px;}
-  .glow{text-shadow:0 0 24px rgba(168,85,247,.6),0 0 4px rgba(168,85,247,.5);}
-  .label{font-family:"Bebas Neue",sans-serif;letter-spacing:.35em;color:var(--primary);font-size:13px;}
-
-  header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(28,18,38,.8);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1100px;margin:0 auto;}
-  .logo{font-family:"Bebas Neue",sans-serif;font-size:26px;letter-spacing:.15em;color:var(--primary);}
-  .logo span{color:var(--fg);}
-  .menu{display:none;gap:24px;}
-  .menu a{color:var(--muted);font-size:14px;font-weight:500;transition:.2s;}
-  .menu a:hover{color:var(--primary);}
-  .btn{background:var(--primary);color:#fff;padding:9px 18px;border-radius:4px;font-weight:600;font-size:14px;display:inline-block;transition:.2s;}
-  .btn:hover{opacity:.9;}
-  .btn-out{background:transparent;border:1px solid var(--border);color:var(--fg);}
-  .btn-out:hover{border-color:var(--primary);color:var(--primary);}
-  @media(min-width:768px){.menu{display:flex;}}
-
-  .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;
-    background:radial-gradient(ellipse at 50% 40%,rgba(168,85,247,.35),transparent 60%),linear-gradient(180deg,#241433,#1c1226 70%,#1c1226);}
-  .hero h1{font-size:clamp(56px,15vw,150px);line-height:.9;}
-  .hero p{max-width:600px;margin:24px auto 0;color:var(--muted);font-size:18px;}
-  .hero .cta{margin-top:36px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
-  .hero .btn,.hero .btn-out{padding:13px 28px;}
-
-  section{padding:96px 0;scroll-margin-top:80px;}
-  .alt{background:rgba(42,28,56,.4);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-  .head{margin-bottom:40px;}
-  .head h2{font-size:clamp(36px,6vw,52px);margin-top:8px;}
-
-  .grid{display:grid;gap:16px;}
-  @media(min-width:768px){.cols2{grid-template-columns:1fr 1fr;}}
-  @media(min-width:640px){.cols2s{grid-template-columns:1fr 1fr;}.cols3{grid-template-columns:repeat(3,1fr);}}
-
-  .card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:28px;}
-  .card h3{font-size:26px;color:var(--primary);margin-bottom:16px;}
-  .card p{color:var(--muted);}
-  .row{display:flex;justify-content:space-between;padding:12px 0;border-top:1px solid rgba(61,43,80,.6);}
-  .row:first-child{border-top:none;}
-  .row dt{color:var(--muted);font-size:14px;}
-  .row dd{font-weight:600;}
-
-  .rank{display:flex;gap:16px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px;transition:.2s;}
-  .rank:hover{border-color:var(--primary);}
-  .rnum{flex:none;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:rgba(168,85,247,.15);
-    color:var(--primary);font-family:"Bebas Neue",sans-serif;font-size:22px;border-radius:4px;}
-  .rank b{font-weight:600;}
-  .rank b span{color:var(--primary);}
-  .rank small{display:block;color:var(--muted);margin-top:2px;font-size:14px;}
-
-  .step{display:flex;gap:16px;margin-bottom:16px;}
-  .step span{flex:none;width:28px;height:28px;display:flex;align-items:center;justify-content:center;background:var(--primary);
-    color:#fff;font-family:"Bebas Neue",sans-serif;border-radius:4px;font-size:14px;}
-  .step p{color:var(--muted);}
-  ul.reqs{list-style:none;}
-  ul.reqs li{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
-  ul.reqs li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--primary);}
-
-  .pay{display:flex;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px 24px;}
-  .pay .val{font-family:"Bebas Neue",sans-serif;font-size:30px;color:var(--accent);}
-  .chip{background:var(--sec);border-radius:4px;padding:12px 16px;font-size:14px;}
-
-  .goal{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px;font-weight:600;}
-  .goal .dot{width:14px;height:14px;border-radius:50%;border:3px solid var(--primary);}
-  .closing{max-width:760px;margin:40px auto 0;text-align:center;color:var(--muted);font-size:18px;}
-  .sign{text-align:center;font-family:"Bebas Neue",sans-serif;font-size:26px;color:var(--primary);margin-top:24px;}
-
-  footer{border-top:1px solid var(--border);padding:40px 0;}
-  .foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
-  .foot p{color:var(--muted);font-size:14px;}
+:root{
+  --background:oklch(0.19 0.014 130);--foreground:oklch(0.94 0.012 110);
+  --card:oklch(0.24 0.017 130);--primary:oklch(0.76 0.135 88);
+  --secondary:oklch(0.30 0.03 135);--muted-foreground:oklch(0.72 0.02 115);
+  --border:oklch(0.35 0.03 130);
+  --font-display:"Oswald",ui-sans-serif,system-ui,sans-serif;
+  --font-sans:"Barlow",ui-sans-serif,system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background-color:var(--background);color:var(--foreground);font-family:var(--font-sans);
+  background-image:linear-gradient(oklch(0 0 0 / .35),oklch(0 0 0 / .35)),
+   repeating-linear-gradient(45deg,oklch(0.24 0.02 135) 0 22px,oklch(0.22 0.018 135) 22px 44px);
+  background-attachment:fixed;line-height:1.6;
+}
+h1,h2,h3{font-family:var(--font-display);letter-spacing:.02em;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+.stencil{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.28em}
+.brass{color:var(--primary)}
+.muted,p{color:var(--muted-foreground)}
+.wrap{max-width:64rem;margin:0 auto;padding:0 1.25rem}
+nav.top{position:sticky;top:0;z-index:20;border-bottom:1px solid var(--border);
+  background:color-mix(in oklch,var(--background),transparent 15%);backdrop-filter:blur(8px)}
+nav.top .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.25rem;padding-top:.75rem;padding-bottom:.75rem}
+nav.top a{font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;color:var(--muted-foreground)}
+nav.top a:hover{color:var(--primary)}
+.brand{font-family:var(--font-display);letter-spacing:.28em;font-weight:700;color:var(--primary);font-size:.9rem}
+main{padding:3.5rem 0}
+.panel{background:linear-gradient(to bottom,color-mix(in oklch,var(--card),white 3%),var(--card));
+  border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:.25rem;
+  box-shadow:0 18px 40px -24px oklch(0 0 0 / .9)}
+.hero{padding:3rem 2rem}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.05;margin-top:1rem;color:var(--foreground)}
+.hero h1 span{display:block;color:var(--primary)}
+.hero p{margin-top:1.5rem;max-width:42rem}
+.chips{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.chip{border:1px solid var(--border);background:color-mix(in oklch,var(--secondary),transparent 60%);
+  border-radius:.25rem;padding:.5rem 1rem}
+.chip span{display:block;font-size:.62rem;text-transform:uppercase;letter-spacing:.18em;color:var(--muted-foreground)}
+.chip strong{font-family:var(--font-display);font-size:1.05rem;font-weight:600}
+section{margin-top:2rem}
+.sec-head{margin-bottom:1.5rem}
+.sec-head .kick{font-size:.7rem;color:var(--primary)}
+.sec-head h2{margin-top:.5rem;font-size:1.6rem}
+.sec-head .rule{margin-top:.75rem;height:1px;width:6rem;background:var(--primary)}
+.grid{display:grid;gap:1.25rem}
+@media(min-width:640px){.grid.two{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.grid.three{grid-template-columns:repeat(3,1fr)}}
+.card{padding:1.5rem}
+.card h3{font-size:1.05rem}
+.card p{margin-top:.75rem;font-size:.9rem}
+.abbr{font-size:1.9rem;font-weight:700;color:var(--primary)}
+.block{padding:2rem}
+.block p{max-width:48rem;font-size:.95rem}
+.tablewrap{overflow-x:auto}
+table{width:100%;min-width:560px;border-collapse:collapse;text-align:left;font-size:.9rem}
+thead tr{background:color-mix(in oklch,var(--secondary),transparent 40%);color:var(--primary);
+  font-size:.7rem;text-transform:uppercase;letter-spacing:.15em}
+th{padding:.75rem 1.25rem}
+td{padding:.6rem 1.25rem;border-top:1px solid color-mix(in oklch,var(--border),transparent 30%)}
+tbody tr:hover{background:color-mix(in oklch,var(--secondary),transparent 70%)}
+td.num{font-family:var(--font-display);color:var(--primary)}
+.sign{margin-top:1.5rem;font-family:var(--font-display);font-size:1.25rem;color:var(--primary)}
+footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;font-size:.7rem;
+  text-transform:uppercase;letter-spacing:.2em;color:var(--muted-foreground)}
 </style>
 </head>
-<body id="top">
-
-<header>
-  <div class="nav">
-    <a href="#top" class="logo glow">BALLAS<span>GANG</span></a>
-    <nav class="menu">
-      <a href="#ueber">Über mich</a>
-      <a href="#erfahrung">Erfahrung</a>
-      <a href="#raenge">Ränge</a>
-      <a href="#beitritt">Beitritt</a>
-      <a href="#auszahlungen">Auszahlungen</a>
-      <a href="#ziele">Ziele</a>
-    </nav>
-    <a href="#beitritt" class="btn">Beitreten</a>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="wrap">
-    <p class="label" style="margin-bottom:16px;">Los Santos · </p>
-    <h1>THE <span class="glow" style="color:var(--primary);">BALLAS</span> GANG</h1>
-    <p>Eine fertige Leaderschaft, klare Ränge und eine Vision. Wir machen die Ballas zu einer der aktivsten Fraktionen auf dem Staat.</p>
-    <div class="cta">
-      <a href="#beitritt" class="btn">Jetzt beitreten</a>
-      <a href="#raenge" class="btn btn-out">Rangsystem ansehen</a>
-    </div>
-  </div>
-</section>
-
-<main>
-  <section id="ueber">
+<body>
+  <nav class="top">
     <div class="wrap">
-      <div class="head"><p class="label">WER FÜHRT</p><h2>Über mich</h2></div>
-      <div class="grid cols2">
-        <div class="card">
-          <h3>In-Character</h3>
-          <dl>
-            <div class="row"><dt>Name</dt><dd>Jan Contino #4310</dd></div>
-            <div class="row"><dt>Discord</dt><dd>jan1308</dd></div>
-            <div class="row"><dt>Online</dt><dd>5–8h pro Tag</dd></div>
-            <div class="row"><dt>Spieler</dt><dd>20+ mitzubringen</dd></div>
-          </dl>
-        </div>
-        <div class="card">
-          <h3>Out-of-Character</h3>
-          <dl>
-            <div class="row"><dt>Name</dt><dd>Jan</dd></div>
-            <div class="row"><dt>Alter</dt><dd>24</dd></div>
-          </dl>
-        </div>
+      <span class="brand">NG</span>
+      <a href="#info">IC & OOC</a>
+      <a href="#motivation">Motivation</a>
+      <a href="#verbesserung">Verbesserungen</a>
+      <a href="#auszeichnung">Stärken</a>
+      <a href="#konzept">Orga-Konzept</a>
+      <a href="#raenge">Rangkonzept</a>
+      <a href="#schlusswort">Schlusswort</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="panel hero" style="margin-top:0">
+      <div class="stencil kick brass" style="font-size:.7rem">Nationalgarde · Bewerbung</div>
+      <h1>Bewerbung zum Leader<span>der Nationalgarde</span></h1>
+      <p>Sehr geehrtes Administrator-Team, hiermit bewerbe ich mich als Leader der Nationalgarde. In dieser Bewerbung erläutere ich Ihnen, weshalb ich die richtige Wahl für diesen Posten bin.</p>
+      <div class="chips">
+          <div class="chip"><span>OOC Name</span><strong>Jan</strong></div>
+          <div class="chip"><span>OOC Alter</span><strong>25</strong></div>
+          <div class="chip"><span>Discord</span><strong>jan1308</strong></div>
+          <div class="chip"><span>IC Name</span><strong>Jan Contino</strong></div>
+          <div class="chip"><span>ID</span><strong>79895</strong></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="erfahrung" class="alt">
-    <div class="wrap">
-      <div class="head"><p class="label">TRACK RECORD</p><h2>Erfahrungen</h2></div>
-      <div class="grid cols2">
-        <div class="card"><h3>Crime</h3><p>Crime-Fam Leader & Co-Leader, mehrfach Vize bei verschiedenen Leadern sowie Highrank. Mara Leader und langjährige Crime-Erfahrung.</p></div>
-        <div class="card"><h3>State</h3><p>In jeder Fraktion Highrank gewesen. Co-Leader bei GOV, SD, FIB, SANG und LSPD. Leader von EMS, LSPD und SANG — zuletzt 3 Monate LSPD Leader.</p></div>
+    <section id="info" class="grid two">
+      <article class="panel card">
+        <div class="sec-head"><div class="kick stencil">Abschnitt 01</div><h2>In Character</h2><div class="rule"></div></div>
+        <p>Ich fing wie viele als Elektriker und mit anderen Jobs auf diesem Staat an. Nachdem ich meine ersten Erfahrungen gesammelt hatte, bin ich zum EMS gegangen und war dort nach der Grundausbildung längere Zeit beschäftigt. Nach meinem Orga-Wechsel zum LSPD habe ich mich dem SWAT angeschlossen, wo ich mit meinem Team sehr erfolgreich das U-Boot, den Flugzeugträger und die Bank verteidigt habe. Beim SAHP sorgte ich anschließend für Ordnung auf den Straßen, arbeitete mich hoch und wurde „Schlepper-Leitung“ sowie später Leitung der HR.</p>
+      </article>
+      <article class="panel card">
+        <div class="sec-head"><div class="kick stencil">Abschnitt 01</div><h2>Out of Character</h2><div class="rule"></div></div>
+        <p>Meine Stärken aus dem OOC-Leben sind vor allem Durchsetzungsvermögen, Durchhaltevermögen und Sorgfalt. Ich weiß, wie man mit vielen Persönlichkeiten umgeht und auf ihre Bedürfnisse eingeht. Dadurch führe ich Gespräche mit Ordnung und Verstand. Sowohl auf dem Staat als auch in Europa habe ich gelernt, dass man mit Vernunft und Respekt weiterkommt als mit Uneinsichtigkeit und Arroganz.</p>
+      </article>
+    </section>
+
+    <section id="motivation" class="panel block">
+      <div class="sec-head"><div class="kick stencil">Abschnitt 02</div><h2>Warum ich Leader werden will</h2><div class="rule"></div></div>
+      <p>Ich stelle mich gerne schwierigen Gesprächen und Situationen, kann gut mit Stress und Trubel umgehen und bin ein Mensch, der für jeden da ist. Für mich stehen Teamwork, Spaß und Professionalität an erster Stelle. Ich sehe in der NG nicht nur eine Fraktion, sondern eine zentrale Säule für qualitativ hochwertiges RP. Als Leader möchte ich die NG zu einer schlagkräftigen, strukturierten und respektierten Organisation führen, die sowohl den Staat als auch das RP nachhaltig stärkt. Ich bringe die nötige Erfahrung, Disziplin und Motivation mit, um ein starkes Team aufzubauen und kontinuierlich weiterzuentwickeln.</p>
+    </section>
+
+    <section id="verbesserung">
+      <div class="sec-head"><div class="kick stencil">Abschnitt 03</div><h2>Vorschläge zur Verbesserung der Orga</h2><div class="rule"></div></div>
+      <div class="grid two">
+          <article class="panel card"><h3 class="brass">Global Events</h3><p>Durch die geplante PR, auch aus der vorherigen NG, will ich eine lange Reihe an spannenden Global Events machen.</p></article>
+          <article class="panel card"><h3 class="brass">Spezialeinheiten</h3><p>Durch die AB und die AF gäbe es zwei Spezialeinheiten, die sich hervorragend ergänzen. So gibt es bei Events eine größere Präsenz der NG.</p></article>
+          <article class="panel card"><h3 class="brass">Air Force</h3><p>Die AF hat erneut fantastische Arbeit geleistet und bleibt fester Bestandteil. Geplant ist der Aufbau der AF bzw. Fallschirmjäger als schnelle Eingreiftruppe – per Flugzeug und Helikopter überall auf der Insel sofort vor Ort.</p></article>
+          <article class="panel card"><h3 class="brass">Intern</h3><p>Die MP muss wieder ordentlich aufgebaut werden, um die NG in Spur zu halten, Konflikte nicht ausarten zu lassen und Probleme sofort zu beseitigen.</p></article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="raenge">
-    <div class="wrap">
-      <div class="head"><p class="label">HIERARCHIE</p><h2>Rangsystem</h2></div>
-      <div class="grid cols2s" id="ranks"></div>
-    </div>
-  </section>
+    <section id="auszeichnung" class="panel block">
+      <div class="sec-head"><div class="kick stencil">Abschnitt 04</div><h2>Was mich als Leader auszeichnet</h2><div class="rule"></div></div>
+      <p>Mich zeichnen vor allem Aktivität und Zuverlässigkeit aus. Auch wenn ich noch nicht so viel Erfahrung wie andere habe, bin ich der Aufgabe als GOTA gut gewachsen. Da ich sehr lernfähig bin, komme ich schnell auf ein Niveau wie Leute mit mehr Erfahrung.</p>
+    </section>
 
-  <section id="beitritt" class="alt">
-    <div class="wrap">
-      <div class="head"><p class="label">DU WILLST REIN?</p><h2>Anforderungen & Beitritt</h2></div>
-      <div class="grid cols2">
-        <div class="card">
-          <h3>Anforderungen</h3>
-          <ul class="reqs">
-            <li>Visum Stufe 2</li><li>Motivation</li><li>Regelwerk-Kenntnis</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3 style="color:var(--fg);">So läuft der Beitritt</h3>
-          <div class="step"><span>1</span><p>Komm vor das HQ – ein Mitglied kommt auf dich zu und fragt, wie es helfen kann.</p></div>
-          <div class="step"><span>2</span><p>Sag, dass du dich gerne vorstellen würdest. Es wird ein Recruiter gerufen.</p></div>
-          <div class="step"><span>3</span><p>Im Gespräch erzählst du so viel wie möglich über dich.</p></div>
-          <div class="step"><span>4</span><p>Danach folgt eine Regelwerks-Abfrage. Bestehst du, wird es dir direkt gesagt.</p></div>
-        </div>
+    <section id="konzept">
+      <div class="sec-head"><div class="kick stencil">Abschnitt 05</div><h2>Konzept meiner Organisation</h2><div class="rule"></div></div>
+      <div class="grid two three">
+          <article class="panel card"><div class="stencil abbr">TRADOC</div><h3>Training and Doctrine Command</h3><p>Hier werden die Rekruten zu vollwertigen Soldaten ausgebildet, um den Staat zu schützen.</p></article>
+          <article class="panel card"><div class="stencil abbr">BO</div><h3>Black Ops</h3><p>Die Spezialeinheit der NG – zuständig für Events wie Bankenschutz, Flugzeugträger und vieles mehr.</p></article>
+          <article class="panel card"><div class="stencil abbr">MP</div><h3>Military Police</h3><p>Ein Mix aus HR und IA: Einstellung und Organisation der Soldaten sowie Einhaltung aller Regeln.</p></article>
+          <article class="panel card"><div class="stencil abbr">AF</div><h3>Air Force</h3><p>Beherrscht den Himmel und erledigt alle Aufgaben aus der Luft, z. B. Overwatch.</p></article>
+          <article class="panel card"><div class="stencil abbr">PR</div><h3>Public Relations</h3><p>Zuständig für die Eventplanung – Global Events wie Lügen-Contest oder Go-Kart-Rennen.</p></article>
+          <article class="panel card"><div class="stencil abbr">INF</div><h3>Infanterie</h3><p>Zu Fuß kämpfende Soldaten der Kampftruppe, mit Handwaffen ausgerüstet – das Rückgrat der Truppe.</p></article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="auszahlungen">
-    <div class="wrap">
-      <div class="head"><p class="label">DEIN ANTEIL</p><h2>Auszahlungen</h2></div>
-      <p style="color:var(--muted);max-width:600px;margin-bottom:32px;">Auszahlungen gibt es immer am Ende der Woche – jeden Sonntag. Sollte es zeitlich mal nicht klappen, kommen sie am Montag.</p>
-      <div class="grid cols3" id="pays"></div>
-      <div class="card" style="margin-top:32px;">
-        <h3>Aufstiegsmöglichkeiten</h3>
-        <div class="grid cols3" style="gap:12px;">
-          <div class="chip">Aktivität zeigen</div><div class="chip">Stärke zeigen</div>
-          <div class="chip">Höflichkeit zeigen</div><div class="chip">Lange dabei sein</div>
-        </div>
-        <p style="margin-top:16px;font-size:14px;">Rank-Ups können jederzeit vergeben werden.</p>
+    <section id="raenge">
+      <div class="sec-head"><div class="kick stencil">Abschnitt 06</div><h2>Mein Rangkonzept</h2><div class="rule"></div></div>
+      <div class="panel tablewrap">
+        <table>
+          <thead><tr><th>Rang</th><th>Dienstrang</th><th>Kürzel</th><th>Bereich</th></tr></thead>
+          <tbody>
+          <tr><td class="num">30</td><td>General of the Army</td><td class="muted">GOTA</td><td class="muted">Generalstab</td></tr>
+          <tr><td class="num">29</td><td>Lieutenant General</td><td class="muted">LTG</td><td class="muted">Generalstab</td></tr>
+          <tr><td class="num">28</td><td>Major General</td><td class="muted">MG</td><td class="muted">Generalstab</td></tr>
+          <tr><td class="num">27</td><td>Brigadier General</td><td class="muted">BG</td><td class="muted">Stabsoffizier</td></tr>
+          <tr><td class="num">26</td><td>Colonel</td><td class="muted">CO</td><td class="muted">Stabsoffizier</td></tr>
+          <tr><td class="num">25</td><td>Lieutenant Colonel</td><td class="muted">LCO</td><td class="muted">Stabsoffizier</td></tr>
+          <tr><td class="num">24</td><td>Major</td><td class="muted">MJ</td><td class="muted">Stabsunteroffizier</td></tr>
+          <tr><td class="num">23</td><td>First Major</td><td class="muted">FMJ</td><td class="muted">Stabsunteroffizier</td></tr>
+          <tr><td class="num">22</td><td>Commander</td><td class="muted">COM</td><td class="muted">Media</td></tr>
+          <tr><td class="num">21</td><td>Lieutenant</td><td class="muted">LT</td><td class="muted">Stabsunteroffizier</td></tr>
+          <tr><td class="num">20</td><td>First Lieutenant</td><td class="muted">FLT</td><td class="muted">Stabsunteroffizier</td></tr>
+          <tr><td class="num">19</td><td>Sergeant Major</td><td class="muted">SGM</td><td class="muted">High Command</td></tr>
+          <tr><td class="num">18</td><td>MP Sergeant</td><td class="muted">MPS</td><td class="muted">High Command</td></tr>
+          <tr><td class="num">17</td><td>PR Sergeant</td><td class="muted">PRS</td><td class="muted">High Command</td></tr>
+          <tr><td class="num">16</td><td>First Sergeant</td><td class="muted">FSG</td><td class="muted">High Command</td></tr>
+          <tr><td class="num">15</td><td>Chief Warrant Officer</td><td class="muted">CWO</td><td class="muted">Offizier</td></tr>
+          <tr><td class="num">14</td><td>First Warrant Officer</td><td class="muted">FWO</td><td class="muted">Offizier</td></tr>
+          <tr><td class="num">13</td><td>Warrant Officer</td><td class="muted">WO</td><td class="muted">Offizier</td></tr>
+          <tr><td class="num">12</td><td>First Class</td><td class="muted">FC</td><td class="muted">Unteroffizier</td></tr>
+          <tr><td class="num">11</td><td>Corporal First Class</td><td class="muted">CFC</td><td class="muted">Unteroffizier</td></tr>
+          <tr><td class="num">10</td><td>Corporal Second Class</td><td class="muted">CSC</td><td class="muted">Unteroffizier</td></tr>
+          <tr><td class="num">9</td><td>Corporal</td><td class="muted">CO</td><td class="muted">Unteroffizier</td></tr>
+          <tr><td class="num">8</td><td>Specialist</td><td class="muted">SL</td><td class="muted">Soldat</td></tr>
+          <tr><td class="num">7</td><td>Private</td><td class="muted">PV</td><td class="muted">Soldat</td></tr>
+          <tr><td class="num">6</td><td>Private First Class</td><td class="muted">PFC</td><td class="muted">Soldat</td></tr>
+          <tr><td class="num">5</td><td>Private Second Class</td><td class="muted">PSC</td><td class="muted">Soldat</td></tr>
+          <tr><td class="num">4</td><td>Recruit</td><td class="muted">RT</td><td class="muted">Soldat</td></tr>
+          <tr><td class="num">3</td><td>Facility Manager</td><td class="muted">FM</td><td class="muted">Sonder</td></tr>
+          <tr><td class="num">2</td><td>Suspendiert</td><td class="muted">ST</td><td class="muted">Sonder</td></tr>
+          <tr><td class="num">1</td><td>Visitor</td><td class="muted">V</td><td class="muted">Sonder</td></tr>
+          </tbody>
+        </table>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="ziele" class="alt">
-    <div class="wrap">
-      <div class="head"><p class="label">WO WIR HIN WOLLEN</p><h2>Ziele</h2></div>
-      <div class="grid cols3" id="goals"></div>
-      <p class="closing">Ich bringe eine fertige Leaderschaft mit, die an meiner Seite die Ballas zu einer der aktivsten Fraktionen des Staates macht. Danke, dass du dir die Zeit genommen hast – ich freue mich über eine Einladung zum Gespräch.</p>
-      <p class="sign">Mit freundlichen Grüßen, Jan Contino</p>
-    </div>
-  </section>
-</main>
+    <section id="schlusswort" class="panel block">
+      <div class="sec-head"><div class="kick stencil">Abschnitt 07</div><h2>Schlusswort</h2><div class="rule"></div></div>
+      <p>Abschließend kann ich nur sagen, dass ich durch meine Erfahrungen, Stärken und meine Zuverlässigkeit ein sehr guter Kandidat wäre. Ich bin hoch motiviert, Verantwortung zu übernehmen und der Leader der Nationalgarde zu werden. Daher würde ich mich sehr über den Leitungsposten freuen.</p>
+      <p class="sign">Jan Contino · ID 79895</p>
+    </section>
+  </main>
 
-<footer>
-  <div class="wrap foot">
-    <span class="logo">BALLAS<span>GANG</span></span>
-    <p>Roleplay-Fraktion · Los Santos</p>
-  </div>
-</footer>
-
-<script>
-  const ranks=[
-    [17,"El Patron","Leader","Selbsterklärend"],[16,"El Jefe","Co-Leader","Selbsterklärend"],
-    [15,"El Speziale","","Unterstützung der Leaderschaft, hohes Vertrauen des Patron"],
-    [14,"El Captiano","","Entlassung des Patron & Jefe, Teil der Leaderschaft"],
-    [13,"Turf-Leader","","Organisiert die Turfs und stellt neue Turfer ein"],
-    [12,"El Captiano","","Organisiert Events"],[11,"El Turfer","","Halten die Gebiete und nehmen neue ein"],
-    [10,"El Recrutro Boss","","Stellt neue Recrus ein und kontrolliert deren Arbeit"],
-    [9,"El General","","Höchster Rang durch reine Aktivität, ohne Absprache"],
-    [8,"El Sicario","","Unterstützt Events"],[7,"El Recruto","","Stellt und kündigt Leute in der Frak"],
-    [6,"El Veterano","","Rang ohne Aufgaben, aktiv bei Events"],[5,"El Mimberio","","Rang ohne Aufgaben, aktiv bei Events"],
-    [4,"El Ladron","","Rang ohne Aufgaben, aktiv bei Events"],[3,"El Novato","","Rang ohne Aufgaben, aktiv bei Events"],
-    [2,"El Member","","Neue Leute starten hier"],[1,"El Snitch","","Wenn man Scheiße baut"]
-  ];
-  document.getElementById("ranks").innerHTML=ranks.map(r=>
-    `<div class="rank"><div class="rnum">${r[0]}</div><div><b>${r[1]}${r[2]?` <span>· ${r[2]}</span>`:""}</b><small>${r[3]}</small></div></div>`).join("");
-
-  const pays=[["Cayo Win","10K"],["FZ Win","15K"],["Erfolgreiche Bank","10K"],["Ghetto Event Win","2,5K"],["AD Win","5K"],["MCL Win","20K"]];
-  document.getElementById("pays").innerHTML=pays.map(p=>
-    `<div class="pay"><span>${p[0]}</span><span class="val">${p[1]}</span></div>`).join("");
-
-  const goals=["HQ Raids","AOT's","Bankraube","Geiselnahmen","Konvoi Überfälle"];
-  document.getElementById("goals").innerHTML=goals.map(g=>
-    `<div class="goal"><span class="dot"></span>${g}</div>`).join("");
-</script>
+  <footer>Nationalgarde · Bewerbung Leader</footer>
 </body>
 </html>
